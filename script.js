@@ -1,11 +1,8 @@
-function threeSum(arr, decimal) {
-let binary="";
-    while (decimal>0){
-        let reminder=decimal%2;
-        arr.push(reminder);
-        decimal=Math.floor(decimal/2);
-    }
-    return arr;
+function decimalToBinary(decimal) {
+  let binary = "";
+  while (decimal > 0) {
+    binary = (decimal % 2) + binary;
+    decimal = Math.floor(decimal / 2);
+  }
+  return binary || "0";
 }
-
-module.exports = threeSum;
